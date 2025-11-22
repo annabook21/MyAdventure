@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyAdventure" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="container-view">
+                                <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Story Text" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" adjustsFontSizeToFitWidth="NO" translatesAutoresizingMaskIntoConstraints="NO" id="story-label">
+                                        <rect key="frame" x="20" y="60" width="804" height="120"/>
+                                        <fontDescription key="fontDescription" type="system" weight="regular" pointSize="18"/>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" translatesAutoresizingMaskIntoConstraints="NO" id="choice1-button">
+                                        <rect key="frame" x="20" y="200" width="804" height="44"/>
+                                        <state key="normal" title="Choice 1"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Choice 1">
+                                            <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="16"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="choice1ButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="choice1-action"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" translatesAutoresizingMaskIntoConstraints="NO" id="choice2-button">
+                                        <rect key="frame" x="20" y="260" width="804" height="44"/>
+                                        <state key="normal" title="Choice 2"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Choice 2">
+                                            <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="16"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="choice2ButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="choice2-action"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" translatesAutoresizingMaskIntoConstraints="NO" id="choice3-button">
+                                        <rect key="frame" x="20" y="320" width="804" height="44"/>
+                                        <state key="normal" title="Choice 3"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Choice 3">
+                                            <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="16"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="choice3ButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="choice3-action"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" translatesAutoresizingMaskIntoConstraints="NO" id="restart-button">
+                                        <rect key="frame" x="342" y="380" width="160" height="44"/>
+                                        <state key="normal" title="Restart"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Restart">
+                                            <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="16"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="restartButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="restart-action"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="container-view" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="container-leading"/>
+                            <constraint firstItem="container-view" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="container-trailing"/>
+                            <constraint firstItem="container-view" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="container-top"/>
+                            <constraint firstItem="container-view" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="container-bottom"/>
+                            <constraint firstItem="story-label" firstAttribute="leading" secondItem="container-view" secondAttribute="leading" constant="20" id="story-leading"/>
+                            <constraint firstItem="story-label" firstAttribute="trailing" secondItem="container-view" secondAttribute="trailing" constant="-20" id="story-trailing"/>
+                            <constraint firstItem="story-label" firstAttribute="top" secondItem="container-view" secondAttribute="top" constant="60" id="story-top"/>
+                            <constraint firstItem="choice1-button" firstAttribute="leading" secondItem="container-view" secondAttribute="leading" constant="20" id="choice1-leading"/>
+                            <constraint firstItem="choice1-button" firstAttribute="trailing" secondItem="container-view" secondAttribute="trailing" constant="-20" id="choice1-trailing"/>
+                            <constraint firstItem="choice1-button" firstAttribute="top" secondItem="story-label" secondAttribute="bottom" constant="20" id="choice1-top"/>
+                            <constraint firstItem="choice2-button" firstAttribute="leading" secondItem="container-view" secondAttribute="leading" constant="20" id="choice2-leading"/>
+                            <constraint firstItem="choice2-button" firstAttribute="trailing" secondItem="container-view" secondAttribute="trailing" constant="-20" id="choice2-trailing"/>
+                            <constraint firstItem="choice2-button" firstAttribute="top" secondItem="choice1-button" secondAttribute="bottom" constant="16" id="choice2-top"/>
+                            <constraint firstItem="choice3-button" firstAttribute="leading" secondItem="container-view" secondAttribute="leading" constant="20" id="choice3-leading"/>
+                            <constraint firstItem="choice3-button" firstAttribute="trailing" secondItem="container-view" secondAttribute="trailing" constant="-20" id="choice3-trailing"/>
+                            <constraint firstItem="choice3-button" firstAttribute="top" secondItem="choice2-button" secondAttribute="bottom" constant="16" id="choice3-top"/>
+                            <constraint firstItem="restart-button" firstAttribute="centerX" secondItem="container-view" secondAttribute="centerX" id="restart-centerX"/>
+                            <constraint firstItem="restart-button" firstAttribute="top" secondItem="choice3-button" secondAttribute="bottom" constant="20" id="restart-top"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="storyLabel" destination="story-label" id="story-outlet"/>
+                        <outlet property="choice1Button" destination="choice1-button" id="choice1-outlet"/>
+                        <outlet property="choice2Button" destination="choice2-button" id="choice2-outlet"/>
+                        <outlet property="choice3Button" destination="choice3-button" id="choice3-outlet"/>
+                        <outlet property="restartButton" destination="restart-button" id="restart-outlet"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="0"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
+
